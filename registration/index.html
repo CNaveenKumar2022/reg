@@ -8,37 +8,40 @@
     <body>
       <div class="container" id="container">
         <center><h1><b><u>Registration Form For Interns</u></b></h1></center>
+        <div class="img">
         <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQFsdwrmye6hbQ/company-logo_200_200/0/1615311169963?e=2147483647&v=beta&t=vd4faLUORz3IIvuFnHz9_Q3FJg6m6Navc0fu-i8brv0" height="100px" width="150px">
+        </div>
         <br>
         <br>
         <br>
         <div class="row g-3">
             <div class="col">
-              <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+              <input type="text" id="firstname" class="form-control" placeholder="First name" aria-label="First name">
+            <p id="first"></p>
             </div>
             <div class="col">
-                <input type="text" class="form-control" placeholder="Middle name" aria-label="Middle name">
+                <input type="text" id="middlename" class="form-control" placeholder="Middle name" aria-label="Middle name">
             </div>
             <div class="col">
-              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+              <input type="text" id="lastname" class="form-control" placeholder="Last name" aria-label="Last name">
             </div>
         </div>
           <form class="row g-3">
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4">
+              <input type="email"  id="page" class="form-control" id="inputEmail4">
             </div>
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label">DOB</label>
-              <input type="date" class="form-control" id="inputPassword4">
+              <input type="date" id="dob"class="form-control" id="inputPassword4" aria-label="DD-MM-YYYY">
             </div>
             <div class="col-12">
               <label for="inputAddress" class="form-label">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              <input type="text" id="add" class="form-control" id="inputAddress" placeholder="1234 Main St">
             </div>
             <div class="col-md-6">
               <label for="inputCity" class="form-label">City</label>
-              <input type="text" class="form-control" id="inputCity">
+              <input type="text" id="city" class="form-control" id="inputCity">
             </div>
             <div class="col-md-4">
               <label for="inputState" class="form-label">State</label>
@@ -76,7 +79,7 @@
             </div>
             <div class="col-md-2">
               <label for="inputZip" class="form-label">Pincode</label>
-              <input type="text" class="form-control" id="inputZip">
+              <input type="text" id="pin" class="form-control" id="inputZip">
             </div>
             <div class="col-md-2">
                 <label for="inputZip" class="form-label">Religion</label>
@@ -84,11 +87,11 @@
              </div>
             <div class="col-md-2">
                 <label for="inputZip" class="form-label">Contact no</label>
-                <input type="text" class="form-control" id="inputZip">
+                <input type="text" id="pno" class="form-control" id="inputZip">
             </div>
             <div class="col-md-4">
                 <label for="inputState" class="form-label">Gender</label>
-                <select id="inputState" class="form-select">
+                <select id="inputState" id="gen" class="form-select">
                   <option selected>choose...</option>
                   <option>Male</option>
                   <option>Female</option>
@@ -115,6 +118,7 @@
           </div>
           <br>
           <h2>Educational Details:</h2>
+          <div class="ssc" id="ssc">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
             <label class="form-check-label" for="flexCheckDefault">
@@ -145,7 +149,13 @@
                 </select>
                 </div>
           </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Marks memo</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+        </div>
           <br>
+          <div class="inter" id="inter">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
             <label class="form-check-label" for="flexCheckDefault">
@@ -178,8 +188,13 @@
                 </select>
                 </div>
           </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Marks memo</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+        </div>
           <br>
-         
+         <div class="degree" id="degree">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
             <label class="form-check-label" for="flexCheckDefault">
@@ -214,8 +229,13 @@
                 </select>
                 </div>
           </div>
-
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Marks memo</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+        </div>
           <br>
+          <div class="pg" id="pg">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
             <label class="form-check-label" for="flexCheckDefault">
@@ -249,75 +269,80 @@
                 </select>
                 </div>
           </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Marks memo</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          </div>
           <br>
           <br>
           <div class="col-12" align="right">
           <div class="col-12">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" onclick="resume()" class="btn btn-primary">Submit</button>
           </div>
           </div>
-<div class="container" id="output">
+<div class="resume" id="resume">
   <hr><hr>
-<marquee bgcolor="yellow" scrollamount=30><h1><u>MY RESUME</u></h1></marquee>
+<h1><u>MY RESUME</u></h1>
 <hr>
 <div class="details">
 <IMG src="C:\Users\cnave\OneDrive\Documents\2.png" height=150 width=100 align="right">
-<font color="white">
-<h2 style="background-color:red"><u>Personal Information</u></h2></font>
+<h2><u>Personal Information</u></h2>
 <p id="name">Name:</p>
-<p id="no">Ph.no:9494422368<br></p>
-//<!--Age:19-->
-<p>Instagram  in profile URL link</p>
-<a href="https://WWW.instagram.com">insta.in</a>
+<p id="no">Ph.no:</p>
+<p id="mail">E-mail:</p>
+<p id="date">DOB:</p>
+<p id="addr">address:</p>
+<p id="cit">city:</p>
+<p id="pc">pincode:</p>
+<p id="ge">Gender:</p>
+<!--Age:19-->
 </div>
 <hr>
 <div class="career_objective">
-<font color="white">
-<h2 style="background-color:red"><u>Career Objective</u></h2></font>
+<h2><u>Career Objective</u></h2>
 <p>To give a solid start by joining eminent and highly professional software company and contribute to the success of the company by out standing performance and there by advancing my career</p></div>
 <hr>
 <div class="education_qualification">
-<font color="white">
-<h2 style="background-color:red"><u>Education Qualification</u></h2></font>
-<table border=5 width=1000 cellspacing="3px" cellpadding="5px">
-<tr bgcolor="color:green">
-	<th style="color:white">S.no</th>
-	<th style="color:white">Qualification</th>
-	<th style="color:white">Board/University</th>
-	<th style="color:white">School/College</th>
-	<th style="color:white">Year of passing</th>
-	<th style="color:white">Percentage</th>
+<h2><u>Education Qualification</u></h2>
+<table border="3px" width="1000px" cellspacing="3px" cellpadding="5px">
+<tr>
+	<th>S.no</th>
+	<th>Qualification</th>
+	<th>Board/University</th>
+	<th>School/College</th>
+	<th>Year of passing</th>
+	<th>Percentage</th>
 </tr>
 <tr>
-	<th>1.</th>
-	<th>Degree</th>
-	<th id="university">Rayalaseema University</th>
-	<th id="institute">St.Joseph's Degree College</th>
-	<th id="year">2023</th>
-	<th id="percentage">8.3</th>
+	<td>1.</td>
+	<td>Degree</td>
+	<td id="university">Rayalaseema University</td>
+	<td id="institute">St.Joseph's Degree College</td>
+	<td id="year">2023</td>
+	<td id="percentage">8.3</td>
 </tr>
 <tr>
-	<th>2.</th>
-	<th>Intermediate</th>
-	<th>Board Of Intermediate</th>
-	<th id="college_name">St.Joseph's Juniour College</th>
-	<th id="passing">2020</th>
-	<th id="points">8.6</th>
+	<td>2.</td>
+	<td>Intermediate</td>
+	<td>Board Of Intermediate</td>
+	<td id="college_name">St.Joseph's Juniour College</td>
+	<td id="passing">2020</td>
+	<td id="points">8.6</td>
 </tr>
 <tr>
-	<th>3.</th>
-	<th>SSC</th>
-	<th>secondary school education</th>
-	<th id="school_name">Keerthi High School</th>
-	<th id="passed_out">2018</th>
-	<th id="result">8.5</th>
+	<td>3.</td>
+	<td>SSC</td>
+	<td>secondary school education</td>
+	<td id="school_name">Keerthi High School</td>
+	<td id="passed_out">2018</td>
+	<td id="result">8.5</td>
 </tr>
 </table>
 </div>
 <hr>
 <div class="technical_skills">
-<font color="white">
-<h2 style="background-color:red"><u>Technical Skills</u></h2></font>
+<h2><u>Technical Skills</u></h2>
 <ol>
 	<li>MS-Office
 	<li>MS-excel
@@ -331,8 +356,7 @@
 </div>
 <hr>
 <div class="strengths">
-<font color="white">
-<h2 style="background-color:red"><u>Strengths</u></h2></font>
+<h2><u>Strengths</u></h2>
 <ul type="circle">
 	<li>Self Motivational
 	<li>Confidental
@@ -342,8 +366,7 @@
 </div>
 <hr>
 <div class="hobbies">
-<font color="white">
-<h2 style="background-color:red"><u>Hobbies</u></h2></font>
+<h2><u>Hobbies</u></h2>
 <ul type="square">
 	<li>playing games
 	<li>reading books
@@ -352,13 +375,9 @@
 </div>
 <hr>
 <div class="additional_information">
-<font color="white">
-<h2 style="background-color:red"><u>Additional Information</u></h2></font>
+<h2><u>Additional Information</u></h2>
 <h5>Languages Known: English,Telugu,Hindi <br>Father Name: C.Sreenivasulu<br>Address: 10/122,telugu street ,kurnool <br>pin.code:518001 Andhra Pradesh<h5>
 </div>
-<button type="button" class="btn btn-previous">Previous</button>
-<button type="button" class="btn btn-primary" align="right">Primary</button>
-<hr>
 </div>
         </body>
     <html>
